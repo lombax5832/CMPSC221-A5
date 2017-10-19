@@ -16,6 +16,8 @@ public class Assignment5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        DrawingWindow drawingWindow = new DrawingWindow();
+        drawingWindow.setVisible(true);
     }
     
 }
