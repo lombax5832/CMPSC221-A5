@@ -66,9 +66,9 @@ public class DrawingPanel extends JPanel{
         //Dashes and width
         float[] dashes = {shape.getDashLength()};
         if(shape.getDashed()){
-            g2d.setStroke(new BasicStroke(shape.getLineWidth(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashes, 0));
+            g2d.setStroke(new BasicStroke(shape.getLineWidth(), BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 10, dashes, 0));
         }else{
-            g2d.setStroke(new BasicStroke(shape.getLineWidth(), BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));
+            g2d.setStroke(new BasicStroke(shape.getLineWidth(), BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));
         }        
     }
     
