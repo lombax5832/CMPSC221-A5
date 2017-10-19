@@ -44,22 +44,6 @@ public class ShapeTypes {
     
     public final SHAPE_TYPES SHAPE_TYPE;
     
-    ShapeTypes(float f0, float f1, float f2, float f3, boolean f4, boolean f5, 
-            boolean f6, int f7, int f8, Color f9, Color f10, SHAPE_TYPES shapeType){
-        fields[0] = f0;
-        fields[1] = f1;
-        fields[2] = f2;
-        fields[3] = f3;
-        filled =    f4;
-        gradient =  f5;
-        dashed =    f6;
-        lineWidth = f7;
-        dashLength =f8;
-        color1 =    f9;
-        color2 =    f10;
-        SHAPE_TYPE =shapeType;
-    }
-    
     ShapeTypes(Point f0, Point f1, boolean f4, boolean f5, boolean f6, 
             int f7, int f8, Color f9, Color f10, SHAPE_TYPES shapeType){
         fields[0] = (float) f0.getX();

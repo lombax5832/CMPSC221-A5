@@ -55,8 +55,8 @@ public class DrawingWindow extends JFrame{
     private final JCheckBox checkBoxUseGradient = new JCheckBox("Use Gradient");
     private final JCheckBox checkBoxDashed = new JCheckBox("Dashed");
     //Textfields for Toolbar
-    private final JTextField textFieldLineWidth = new JTextField("1",2);
-    private final JTextField textFieldDashLength = new JTextField("1",2);
+    private final JTextField textFieldLineWidth = new JTextField("10",2);
+    private final JTextField textFieldDashLength = new JTextField("50",2);
     //Layout to be used
     private final FlowLayout toolBarLayout = new FlowLayout();
     //Label for mouse Coordinates
@@ -65,7 +65,7 @@ public class DrawingWindow extends JFrame{
     private ShapeTypes tempShape;
     //Colors
     private Color color1 = Color.GRAY;
-    private Color color2 = Color.GRAY;
+    private Color color2 = Color.RED;
     
     DrawingWindow() {
         super("Drawing");
@@ -150,7 +150,11 @@ public class DrawingWindow extends JFrame{
             new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    Color tempColor = new Color(color1.getRGB());
                     color1 = JColorChooser.showDialog(DrawingWindow.this, "Choose Color 1", color1);
+                    if(color1==null){
+                        color1=tempColor;
+                    }
                 }
 
             }
@@ -160,7 +164,11 @@ public class DrawingWindow extends JFrame{
             new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    Color tempColor = new Color(color2.getRGB());
                     color2 = JColorChooser.showDialog(DrawingWindow.this, "Choose Color 2", color2);
+                    if(color2==null){
+                        color2=tempColor;
+                    }
                 }
 
             }
